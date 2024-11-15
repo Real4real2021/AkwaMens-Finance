@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Customer Branches</title>
+</head>
+
+<body>
+    <dvi class="top-third">
+        <div>
+
+            <label for="select-customer">Select a customer:
+                <select name="customer-selector" id="customer-selector">
+                    <option value="kk">KK</option>
+                    <option value="kojo">Kojo</option>
+                </select>
+            </label>
+            <table id="customer-table">
+                <th>Short Name</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Sales Person</th>
+                <th>Area</th>
+                <th>Phone No</th>
+                <th>E-mail</th>
+                <th>Tax Group</th>
+                <tbody id="table-body">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="customer-info">
+            <div class="mid-third">
+
+                <h1>Name and Contact</h1>
+                <label for="branch-name">Branch Name;
+                    <input type="text" id="branch-name-input">
+                </label><br>
+                <label for="branch-short-name">Branch Name Short:
+                    <input type="text" id="branch-short-name-input">
+                </label>
+                <h1>Sales</h1>
+                <label for="sales-person">Sales Person:
+                    <select name="sales-person-selector" id="sales-person-selector">
+                        <option value="sales-person">Sales Person</option>
+                    </select>
+                </label><br>
+                <label for="sales-area">Sales Area:
+                    <select name="sales-area-selector" id="sales-area-selector">
+                        <option value="global">Global</option>
+                    </select>
+                </label><br>
+                <label for="sales-group">Sales Group:
+                    <select name="sales-group-selector" id="sales-group-selector">
+                        <option value="group">Group</option>
+                    </select>
+                </label><br>
+                <label for="default-inventory-location">Default Inventory Location:
+                    <select name="default-inventory-location-location" id="default-inventory-location-location">
+                        <option value="default">Default</option>
+                    </select>
+                </label><br>
+                <label for="default-shipping-company">Default Shipping Company:
+                    <select name="default-shipping-company-selector" id="default-shipping-company-selector">
+                        <option value="default">Default</option>
+                    </select><br>
+                    <label for="tax-group">Tax Group:
+                        <select name="tax-group-selector" id="tax-group-selector">
+                            <option value="tax">Tax</option>
+                            <option value="tax-exempt">Tax Exempt</option>
+                        </select>
+                    </label>
+                </label>
+                <h1>GL Accounts</h1>
+                <label for="sales-account">Sales Account:
+                    <select name="sales-account-selector" id="sales-account-selector">
+                        <option value="use-item-sales-accounts">Use Item Sales Accounts</option>
+                    </select>
+                </label><br>
+                <label for="sales-discount-account">Sales Discount Account:
+                    <select name="sales-discount-account-selector" id="sales-discount-account-selector">
+                        <option value="4510-discount-given">4510 Discount Given</option>
+                    </select>
+                </label><br>
+                <label for="accounts-receivable-account">Account Receivable Account:
+                    <select name="accounts-receivable-account-selector" id="accounts-receivable-account-selector">
+                        <option value="1200-accounts-receivables">1200 Accounts Receivables</option>
+                    </select>
+                </label><br>
+                <label for="prompt-payment-discount-account">Prompt Payment Discount Account:
+                    <select name="prompt-payment-discount-account-selector"
+                        id="prompt-payment-discount-account-selector">
+                        <option value="4500-prompt-payment-discounts">4500 Prompt Payment Discounts</option>
+                    </select>
+                </label><br>
+                <label for="bank-account-number">Bank Account Number:
+                    <input type="text" id="bank-account-input">
+                </label>
+            </div>
+        </div>
+        </div>
+        <div class="customer-info">
+            <h1>General Contact Data</h1>
+            <label for="contact-person">Contact Person:
+                <input type="text" id="contact-person-input">
+            </label><br>
+            <label for="phone-number">Phone Number:
+                <input type="text" id="phone-number-input">
+            </label><br>
+            <label for="secondary-phone-number">Secondary Phone Number:
+                <input type="text" id="secondary-phone-number-input">
+            </label><br>
+            <label for="email">E-mail:
+                <input type="text" id="email-input">
+            </label><br>
+            <label for="document-language">Document Language;
+                <select name="document-language-selector" id="document-language-selector">
+                    <option value="customer-default">Customer default</option>
+                </select>
+            </label>
+            <h1>Address</h1>
+            <label for="mailing-address">Mailing Address:
+                <input type="text" id="mailing-address-input">
+            </label><br>
+            <label for="billing-address">Billing Address:
+                <input type="text" id="billing-address-input">
+            </label><br>
+            <label for="general-notes">General Notes:
+                <input type="text" id="general-notes-input">
+            </label>
+        </div>
+        <div>
+            <input type="button" value="Add New" id="add-new-branch-button">
+            <a href="index.html">Back</a>
+        </div>
+</body>
+<script src="scripts/customer-branches.js"></script>
+</html>

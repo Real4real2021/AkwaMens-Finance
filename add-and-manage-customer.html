@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html" class="active">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="top-third">  
+            <div class="customer-info">
+                <h2>Name and Address</h2>
+                <label for="customer-name">Customer Name:
+                    <input type="text" class="customer-name">
+                </label><br>
+                <label for="customer-short-name">Customer Short Name:
+                    <input type="text" class="customer-short-name">
+                </label><br>
+                <label for="address">Address:
+                    <input type="text" class="customer-address">
+                </label><br>
+                <label for="gstNo">GSTNo:
+                    <input type="text" class="gstNo">
+                </label><br>
+                <label for="customer-currency">Customer's Currency:
+                    <select name="currency-selector" id="currency-selector">
+                        <option class="rand" value="rand">Rand</option>
+                    </select>
+                </label><br>
+                <label for="sales-type-price-list">Sales Type/Price List:
+                    <select name="sales-type-price-list" id="sales-type-price-list">
+                        <option class="retail" value="retail">Retail</option>
+                        <option class="wholesale" value="wholesale">Wholesale</option>
+                    </select>
+                </label><br>
+                <h2>Branch</h2>
+                <label for="phone">Phone:
+                    <input type="text" class="phoneNumber">
+                </label><br>
+                <label for="secondary-phone-number">Secondary Phone Number:
+                    <input type="text" class="secondary-phone-number">
+                </label><br>
+                <label for="email">E-mail:
+                    <input type="text" class="email">
+                </label><br>
+                <label for="bank-account-number">Bank Account Number:
+                    <input type="text" class="bank-account-number">
+                </label><br>
+                <label for="sales-person">Sales Person:
+                    <select name="sales-person" id="sales-person">
+                        <option class="sales-person" value="sales-person">Sales Person</option>
+                    </select>
+                </label>
+            </div>
+            <div class="customer-info">
+                <h2>Sales</h2>
+                <label for="discount-percent">Discount Percent:
+                    <input class="discount-percent" type="text" placeholder="0.0">%
+                </label><br>
+                <label for="payment-discount-percent">Prompt Payment Discount Perent:
+                    <input class="payment-discount-percent" type="text" placeholder="0.0">
+                </label><br>
+                <label for="credit-limit">Credit Limit:
+                    <input class="credit-limit" type="text" placeholder="1,000.00">
+                </label><br>
+                <label for="payment-terms">Payment Terms:
+                    <select name="payment-tems" id="payment-terms">
+                        <option class="cash-only" value="cash-only">Cash Only</option>
+                        <option class="due-15th-of-the-following-month" value="due-15th-of-the-following-month">Due 15th of the following month</option>
+                        <option class="due-by-end-of-the-following-month" value="due-by-end-of-the-following-month">Due by end of the following month</option>
+                        <option class="payment-due-within-10-days" value="payment-due-within-10-days">Payment-due-within-10-days</option>
+                        <option class="prepaid" value="prepaid">Prepaid</option>
+                    </select>
+                </label><br>
+                <label for="general-notes">General Notes:
+                    <input type="text" class="general-notes">
+                </label>
+                <h2>Branch</h2>
+                <label for="default-inventory-location">Default Inventory Location:
+                    <select name="default-inventory-location" id="default-inventory-location">
+                        <option class="default-inventory-location" value="default">Default</option>
+                    </select>
+                </label><br>
+                <label for="default-shipping-company">Default Shipping Company:
+                    <select name="default-shipping-company" id="default-shipping-company">
+                        <option class="default" value="default">Default</option>
+                    </select>
+                </label><br>
+                <label for="sales-area">Sales Area: 
+                    <select name="sales-area" id="sales-area">
+                        <option class="global" value="global">Global</option>
+                    </select>
+                </label><br>
+                <label for="tax-group">Tax Group:
+                    <select name="tax-group" id="tax-group">
+                        <option class="tax" value="tax">Tax</option>
+                        <option class="text-exempt" value="tax-exempt">Tax Exempt</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="mid-third">
+            <input class="add-new-customer-button" type="button" value="Add New Customer">
+        </div>
+        <div class="botton-third">
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+<script src="scripts/add-and-manage-customer.js"></script>
+</html>

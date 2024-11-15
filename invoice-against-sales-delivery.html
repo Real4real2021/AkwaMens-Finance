@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Invoice Against Sale Delivery</title>
+</head>
+<body>
+    <div class="sidebar">
+
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+    <div class="main-content">
+
+        <label for="#">#:
+            <input type="button">
+        </label>
+        <label for="from">From: 
+            <input type="date" name="from" id="from">
+        </label>
+        <label for="to">To:
+            <input type="date" name="to" id="to">
+        </label>
+        <label for="location">location:
+            <select name="location" id="">
+                <option value="all-locations">All Location</option>
+                <option value="Default">Default</option>
+            </select>
+        </label>
+        <label for="item">Item: 
+            <input type="text" name="item" id="item">
+        </label>
+        <select name="inventory-item" id="inventory-item">
+            <option value="all-items">All Items</option>
+            <option value="test-item">Test Item</option>
+            <option value="test-item-1">Test Item 1</option>
+        </select>
+        <label for="customer-select">Select a customer:
+            <select name="customer" id="customer">
+                <option value="KK">KK</option>
+                <option value="Kojo">Kojo</option>
+            </select>
+        </label>
+        <input type="button" value="Search">
+    
+        <table>
+            <th>Delivery #</th>
+            <th>Customer</th>
+            <th>Branch</th>
+            <th>Contact</th>
+            <th>Reference</th>
+            <th>Cust Ref</th>
+            <th>Delivery Date</th>
+            <th>Due By</th>
+            <th>Delivery Total</th>
+            <th>Currency</th>
+            <tr>
+                <td colspan="10">
+                    No Records
+                </td>
+            </tr>
+        </table>
+        <a href="index.html">Back</a>
+    </div>
+</body>
+<script src="scripts/invoice-against-sales-delivery.js"></script>
+</html>

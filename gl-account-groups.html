@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>GL Account Groups</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html" class="active">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        
+        <table>
+            <th>Group ID</th>
+            <th>Group Name</th>
+            <th>Subgroup of</th>
+            <th>Class</th>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Current Assets</td>
+                    <td></td>
+                    <td>Assets</td>
+                    <td><input type="button" value="Edit" id="edit-button"></td>
+                    <td><input type="button" value="Delete" id="delete-button"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Inventory Assets</td>
+                    <td></td>
+                    <td>Assets</td>
+                    <td><input type="button" value="Edit" id="edit-button"></td>
+                    <td><input type="button" value="Delete" id="delete-button"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Capital Assets</td>
+                    <td></td>
+                    <td>Assets</td>
+                    <td><input type="button" value="Edit" id="edit-button"></td>
+                    <td><input type="button" value="Delete" id="delete-button"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" name="" id="id-input"></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="" id="name-input"></td>
+            </tr>
+            <tr>
+                <td>Subgroup of:</td>
+                <td><select name="" id="subgroup-of-selector"></select></td>
+            </tr>
+            <tr>
+                <td>Class:</td>
+                <td><select name="" id="class-selector"></select></td>
+            </tr>
+        </table>
+        <input type="button" value="Add New" id="add-new-button">
+        <a href="banking-and-general-ledger.html">Banking & General Ledger</a>
+    </div>
+</body>
+<script src="scripts/banking and general ledger/gl-account-groups.js"></script>
+</html>

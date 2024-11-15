@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Customer Credit Notes</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Customer Credit Note</h1>
+        <div class="input-div">
+            
+        </div>
+        <div class="mid-third">
+            <h2>Credit Note Item</h2>
+            <table>
+                <th>Item Code</th>
+                <th>Item Description</th>
+                <th>Qunatity</th>
+                <th>Unit</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="" id=""></td>
+                        <td><select name="item-from-inventory" id="item-from-inventory">
+                            <option value="test-item-1">Test Item 1</option>
+                            <option value="test-item-2">Test Item 2</option>
+                            <option value="test-item-3">Test Item 3</option>
+                        </select></td>
+                        <td><input type="text" name="qunatity" id="qunatity"></td>
+                        <td>each</td>
+                        <td><input type="text" name="price" id="price"></td>
+                        <td><input type="text" name="discount" id="discount"></td>
+                        <td>0.00</td>
+                        <td><input type="button" value="Add Item"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="align-right">Sub-total</td>
+                        <td class="align-right">0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="align-right">Shipping</td>
+                        <td><input type="text" name="shipping" id="shipping" placeholder="0.00"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="align-right">Credit Note Total</td>
+                        <td class="align-right">0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <table>
+                <tr>
+                    <td>Credit Note Type</td>
+                    <td><select name="credit-not-type" id="credit-not-type">
+                        <option value="items-returned-to-inventory-location"> Items Returned to Inventory Location</option>
+                        <option value="items-written-off">Items Written Off</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Items Returned to Location</td>
+                    <td><select name="items-returned-to-location" id="items-returned-to-location">
+                        <option value="default">Default</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Memo:</td>
+                    <td><input type="text" name="memo" id="memo"></td>
+                </tr>
+            </table>
+            <input type="button" value="Update">
+            <input type="button" value="Process Credit Note"><br>
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+<script src="scripts/customer-credit-notes.js"></script>
+</html>

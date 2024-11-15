@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Create and Print Recurrent Invoices</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Create and Print Recurrent Invoices</h1>
+        <table>
+            <th>Description</th>
+            <th>Template No</th>
+            <th>Customer</th>
+            <th>Branch/Group</th>
+            <th>Days</th>
+            <th>Monthly</th>
+            <th>Begin</th>
+            <th>End</th>
+            <th>Next Invoice</th>
+        </table>
+        <a href="index.html">Back</a>
+    </div>
+</body>
+<script>
+    // Tab functionality
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabId = tab.getAttribute('data-tab');
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            tab.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('search');
+    const sidebarItems = document.querySelectorAll('.sidebar a');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+
+        sidebarItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+        });
+
+        gridItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+        });
+    });
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        const isDarkTheme = body.classList.contains('dark-theme');
+        localStorage.setItem('darkTheme', isDarkTheme);
+        updateThemeToggleText();
+    });
+
+    // Function to update theme toggle button text
+    function updateThemeToggleText() {
+        const isDarkTheme = body.classList.contains('dark-theme');
+        themeToggle.textContent = isDarkTheme ? 'Light Theme' : 'Dark Theme';
+    }
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('darkTheme');
+    if (savedTheme === 'true') {
+        body.classList.add('dark-theme');
+    }
+
+    // Initial update of theme toggle text
+    updateThemeToggleText();
+</script>
+</html>

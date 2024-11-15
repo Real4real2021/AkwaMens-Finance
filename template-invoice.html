@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+    </div>
+    <div class="main-content">
+
+        <h1>Search Template for Invoicing</h1>
+        <div class="top-third">
+            <label for="#">#:
+                <input type="text" name="#" id="#">
+            </label>
+            <label for="ref">Ref:
+                <input type="text" name="ref" id="ref">
+            </label>
+            <label for="location">Location:
+                <select name="location" id="location">
+                    <option value="all-locations">All Locations</option>
+                    <option value="Default">Default</option>
+                </select>
+            </label>
+            <label for="item">Item:
+                <input type="text" name="item" id="item">
+            </label>
+            <select name="items-from-inventory" id="items-from-inventory">
+                <option value="all-items">All Items</option>
+                <option value="test-item-1">Test Item 1</option>
+            </select>
+            <label for="select-a-customer">Select a Customer:
+                <select name="customer-selector" id="customer-selector">
+                    <option value="all-customers">All Customers</option>
+                    <option value="kk">KK</option>
+                    <option value="kojo">Kojo</option>
+                    <option value="Kris">Kris</option>
+                </select>
+            </label>
+            <input type="button" value="Search">
+        </div>
+        <div class="mid-third">
+            <table>
+                <th>Order #</th>
+                <th>Ref</th>
+                <th>Customer</th>
+                <th>Branch</th>
+                <th>Description</th>
+                <th>Order Date</th>
+                <th>Required By</th>
+                <th>Delivery To</th>
+                <th>Order Total</th>
+                <th>Currency</th>
+                <tbody>
+                    <tr>
+                        <td colspan="10">No Record</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="index.html">Back</a>
+    </div>
+</body>
+<script>
+    const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search');
+        const sidebarItems = document.querySelectorAll('.sidebar a');
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            sidebarItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+
+            gridItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDarkTheme = body.classList.contains('dark-theme');
+            localStorage.setItem('darkTheme', isDarkTheme);
+            updateThemeToggleText();
+        });
+
+        // Function to update theme toggle button text
+        function updateThemeToggleText() {
+            const isDarkTheme = body.classList.contains('dark-theme');
+            themeToggle.textContent = isDarkTheme ? 'Light Theme' : 'Dark Theme';
+        }
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('darkTheme');
+        if (savedTheme === 'true') {
+            body.classList.add('dark-theme');
+        }
+
+        // Initial update of theme toggle text
+        updateThemeToggleText();
+</script>
+</html>

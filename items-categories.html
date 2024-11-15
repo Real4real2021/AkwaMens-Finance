@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Item Categories</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html" class="active">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Item Categories</h1>
+        <div id="first-table">
+            <table>
+                <th>Name</th>
+                <th>Tax Type</th>
+                <th>Units</th>
+                <th>Type</th>
+                <th>Sales Account</th>
+                <th>Inventory Account</th>
+                <th>COGS Account</th>
+                <th>Adjustment Account</th>
+                <th>Assembly Account</th>
+                <tbody>
+                    <tr>
+                        <td>Charges</td>
+                        <td>Regular</td>
+                        <td>each</td>
+                        <td>Service</td>
+                        <td>4010</td>
+                        <td>1510</td>
+                        <td>5010</td>
+                        <td>5040</td>
+                        <td>1530</td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                    <tr>
+                        <td>Components</td>
+                        <td>Regular</td>
+                        <td>each</td>
+                        <td>Purchased</td>
+                        <td>4010</td>
+                        <td>1510</td>
+                        <td>5010</td>
+                        <td>5040</td>
+                        <td>1530</td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>    
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                    <tr>
+                        <td>Services</td>
+                        <td>Regular</td>
+                        <td>hr</td>
+                        <td>Service</td>
+                        <td>4010</td>        
+                        <td>1510</td>
+                        <td>5010</td>
+                        <td>5040</td>
+                        <td>1530</td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                    <tr>
+                        <td>Systems</td>
+                        <td>Regular</td>
+                        <td>each</td>
+                        <td>Manufactured</td>
+                        <td>4010</td>
+                        <td>1510</td>
+                        <td>5010</td>
+                        <td>5040</td>
+                        <td>1530</td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="second-table">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Category Name:</td>
+                        <td><input type="text" name="" id="category-name-input"></td>
+                    </tr>
+                    <tr>
+                        <td><th>Default Values For New Items</th></td>
+                    </tr>
+                    <tr>
+                        <td>Item Tax Type:</td>
+                        <td><select name="" id="item-tax-type-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Item Type:</td>
+                        <td><select name="" id="item-type-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Units of Measure:</td>
+                        <td><select name="" id="unit-of-measure-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Exclude From Sales:</td>
+                        <td><input type="radio" name="" id="radio-exclude-from-sales"></td>
+                    </tr>
+                    <tr>
+                        <td>Exclude From Purchases:</td>
+                        <td><input type="radio" name="" id="radio-exclude-from-purchases"></td>
+                    </tr>
+                    <tr>
+                        <td>Sales Account:</td>
+                        <td><select name="" id="sales-account-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Inventory Account:</td>
+                        <td><select name="" id="inventory-account-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>COGS Account:</td>
+                        <td><select name="" id="cogs-account-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Adjustment Account:</td>
+                        <td><select name="" id="adjustment-account-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Assembly Account:</td>
+                        <td><select name="" id="assembly-account-selector"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Dimension 1</td>
+                        <select name="dimension-selector" id="dimension-selector"></select>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="button" value="Add New" id="add-new-button">
+        <a href="items-and-inventory.html">Back</a>
+    </div>
+</body>
+<script src="scripts/items and inventory/item-categories.js"></script>
+</html>

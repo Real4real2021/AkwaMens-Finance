@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Sales Order Inquiry</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Search All Sales Order</h1>
+        <label for="#">#:
+            <input type="text">
+        </label>
+        <label for="Ref">Ref:
+            <input type="text">
+        </label>
+        <select name="order-date" id="order-date">
+            <option value="order-date">Order Date:</option>
+            <option value="delivery-date">Delivery Date:</option>
+        </select>
+        <label for="from">From:
+            <input type="date">
+        </label>
+        <label for="to">To:
+            <input type="date">
+        </label>
+        <label for="location">Location:
+            <select name="all-location" id="all-location">
+                <option value="all-locations">All Locations</option>
+                <option value="default">Default</option>
+            </select>
+        </label><br>
+        <label for="item">Item:
+            <input type="text">
+        </label>
+        <select name="all-items" id="all-items">
+            <option value="all-items">All Items</option>
+            <option value="all-items">Default</option>
+        </select>
+        <label for="select-a-customer">Select a Customer:
+            <select name="customer-selector" id="customer-selector">
+                <option value="all-customers">All Customers</option>
+                <option value="kk">KK</option>
+            </select>
+        </label>
+            <label for="zero-values">Zero Values:
+                <input type="radio">
+            </label>
+            <label for="no-auto">No Auto:
+                <input type="radio">
+            </label>
+            <input type="button" value="Search">
+    
+            <div>
+                <table>
+                    <th>Order #</th>
+                    <th>Ref</th>
+                    <th>Customer</th>
+                    <th>Branch</th>
+                    <th>Cust Order Ref</th>
+                    <th>Order Date</th>
+                    <th>Required By</th>
+                    <th>Delivery To</th>
+                    <th>Order Total</th>
+                    <th>Currency</th>
+                    <th>Tmpl</th>
+                    <tbody>
+                        <tr>
+                            <td colspan="11">No records</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <a href="index.html">Back</a>
+            </div>
+    </div>
+</body>
+<script src="scripts/sales-order-inquiry.js"></script>
+</html>

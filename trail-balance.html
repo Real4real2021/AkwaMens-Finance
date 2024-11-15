@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Trail Balance</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html" class="active">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Trail Balance</h1>
+        <div id="input-div">
+            <label for="from">From:
+                <input type="date" name="" id="from-date-input">
+            </label>
+            <label for="to">To:
+                <input type="date" name="" id="to-date-input">
+            </label>
+            <label for="dimension">Dimension:
+                <select name="" id="dimension-selector"></select>
+            </label>
+            <label for="no-zero-values">No zero values:
+                <input type="checkbox" name="" id="no-zero-values-checkbox">
+            </label>
+            <label for="only-balances">Only balances:
+                <input type="checkbox" name="" id="only-balances-checkbox">
+            </label>
+            <label for="group-totals-only">Group totals only:
+                <input type="checkbox" name="" id="group-totals-only-checkbox">
+            </label>
+        </div>
+    
+        <div id="table-div">
+            <table>
+                <th>Account</th>
+                <th>Account Name</th>
+                <th id="brought-forward">Debit</th>
+                <th id="brought-forward">Credit</th>
+                <th id="this-period">Debit</th>
+                <th id="this-period">Credit</th>
+                <th id="balance">Debit</th>
+                <th id="balance">Credit</th>
+                <tbody>
+                    <tr>
+                        <td colspan="8">Class - 1 - Assets</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">Group - 1 - Current Assets</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Current Assets</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">Group - 2 - Inventory Assets</td>
+    
+                    </tr>
+                    <tr>
+                        <td>
+                            Data
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Data
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Inventory Assets</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Group - 3 - Capital Assets</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Capital Assets</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Class - 2 - Liabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Class - 4 - Current Liabilities </td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Current Liabilities</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Group - 5 - Long Term Liabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Long Term Liabilities</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Group - 6 - Share Capital</td>
+                    </tr>
+                    <tr>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Share Capital</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Group - 7 - Retained Earnings </td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Retained Earnings</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>class - 3 - Income</td>
+                    </tr>
+                    <tr>
+                        <td>Gourp - 8 - Sales Revenue </td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total - Sales Revenue</td>
+                        <td>Data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="banking-and-general-ledger.html">Back</a>
+    </div>
+    
+</body>
+<script src="scripts/banking and general ledger/trail-balance.js"></script>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkwaMens - Business Financial Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html" class="active">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="tab-container">
+            <button class="tab active" data-tab="transactions">Transactions</button>
+            <button class="tab" data-tab="inquiries">Inquiries and Reports</button>
+            <button class="tab" data-tab="maintenance">Maintenance</button>
+        </div>
+        <div id="transactions" class="tab-content active">
+            <h2>Transactions</h2>
+            <div class="grid">
+                <div class="grid-item"><a href="sales-quotation-entry.html">Sales Quotation Entry</a></div>
+                <div class="grid-item"><a href="sales-order-entry.html">Sales Order Entry</a></div>
+                <div class="grid-item"><a href="direct-delivery.html">Direct Delivery</a></div>
+                <div class="grid-item"><a href="direct-invoices.html">Direct Invoice</a></div>
+                <div class="grid-item"><a href="template-delivery.html">Template Delivery</a></div>
+                <div class="grid-item"><a href="template-invoice.html">Template Invoice</a></div>
+                <div class="grid-item"><a href="create-and-print-recurrent-invoices.html">Create and Print Recurrent Invoices</a></div>
+                <div class="grid-item"><a href="customer-payment.html">Customer Payment</a></div>
+                <div class="grid-item"><a href="customer-credit-notes.html">Customer Credit Notes</a></div>
+                <div class="grid-item"><a href="delivery-against-sales-order.html">Delivery Against Sales Order</a></div>
+                <div class="grid-item"><a href="invoice-against-sales-delivery.html">Invoice Against Sales Delivery</a></div>
+                <div class="grid-item"><a href="invoice-prepaid-order.html">Invoice Prepaid Order</a></div>
+                <div class="grid-item"><a href="allocate-customer-payment-or-credit-notes.html">Allocate Customer Payment or Credit Notes</a></div>
+            </div>
+        </div>
+        <div id="inquiries" class="tab-content">
+            <h2>Inquiries and Reports</h2>
+            <div class="grid">
+                <div class="grid-item"><a href="sales-quotation-inquiry.html">Sales Quotation Inquiry</a></div>
+                <div class="grid-item"><a href="sales-order-inquiry.html">Sales Order Inquiry</a></div>
+                <div class="grid-item"><a href="customer-transaction-inquiry.html">Customer Transaction Inquiry</a></div>
+                <div class="grid-item"><a href="customer-allocation-inquiry.html">Customer Allocation Inquiry</a></div>
+                <div class="grid-item"><a href="customer-and-sales-reports.html">Customer and Sales Reports</a></div>
+                <!-- <div class="grid-item">Financial Statements</div>
+                <div class="grid-item">Inventory Reports</div>
+                <div class="grid-item">Custom Report Builder</div> -->
+            </div>
+        </div>
+        <div id="maintenance" class="tab-content">
+            <h2>Maintenance</h2>
+            <div class="grid">
+                <div class="grid-item">Add and Manage Customers</div>
+                <div class="grid-item">Customer Branches</div>
+                <div class="grid-item">Sales Groups</div>
+                <div class="grid-item">Recurrent Invoices</div>
+                <div class="grid-item">Sales Type</div>
+                <div class="grid-item">Sales Persons</div>
+                <div class="grid-item">Sales Areas</div>
+                <div class="grid-item">Credit Status Setup</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search');
+        const sidebarItems = document.querySelectorAll('.sidebar a');
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            sidebarItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+
+            gridItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDarkTheme = body.classList.contains('dark-theme');
+            localStorage.setItem('darkTheme', isDarkTheme);
+            updateThemeToggleText();
+        });
+
+        // Function to update theme toggle button text
+        function updateThemeToggleText() {
+            const isDarkTheme = body.classList.contains('dark-theme');
+            themeToggle.textContent = isDarkTheme ? 'Light Theme' : 'Dark Theme';
+        }
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('darkTheme');
+        if (savedTheme === 'true') {
+            body.classList.add('dark-theme');
+        }
+
+        // Initial update of theme toggle text
+        updateThemeToggleText();
+    </script>
+</body>
+</html>

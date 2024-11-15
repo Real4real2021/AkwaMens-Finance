@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Items</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html" class="active">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div>
+            <label for="select-an-item">Select an Item:
+                <input type="text" class="item-code-input">
+                <select name="inventory" id="inventory">
+                    <option value="item-1">Item 1</option>
+                    <option value="item-2">Item 2</option>
+                    <option value="item-3">Item 3</option>
+                    <option value="item-4">Item 4</option>
+                </select>
+            </label>
+        </div>
+        <div class="tab-toggle-buttons">
+            <input type="button" class="general-settings" value="General Settings">
+            <input type="button" class="sales-pricing" value="Sales Pricing">
+            <input type="button" class="purchasing-pricing" value="Purchasing Pricing">
+            <input type="button" class="standard-costs" value="Standard Costs">
+            <input type="button" class="reorder-levels" value="Reorder Levels">
+            <input type="button" class="transactions" value="Transactions">
+            <input type="button" class="status" value="Status">
+            <input type="button" class="attachments" value="Attachments">
+        </div>
+        <div class="rendered-table">
+
+        </div>
+        <div>
+            <a href="items-and-inventory.html">Back</a>
+        </div>
+
+        <select name="gl-accounts" id="gl-accounts">
+
+        </select>
+        <a href="items-and-inventory.html">Back</a>
+</body>
+</div>
+<script src="scripts/items and inventory/items.js"></script>
+
+</html>

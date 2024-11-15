@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Sales Kits</title>
+</head>
+<body>
+    <div class="sidebar">
+
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html" class="active">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Sales Kits & Alias Codes</h1>
+        <div id="input-div">
+            <label for="select-sales-kit">Select a Sales Kit:
+                <input type="text" name="" id="sales-kit-code-input">
+            </label>
+            <select name="" id="sales-kit-selector"></select>
+        </div>
+        <div id="first-table">
+            <table>
+                <tr>
+                    <td>Description</td>
+                    <td><input type="text" name="" id="description-input"></td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td><select name="" id="category-selector"></select></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Update" id="update-button"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="second-table">
+            <table>
+                <th>Stock Item</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Units</th>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <div id="third-table">
+            <table>
+                <tr>
+                    <td>Components:</td>
+                    <td><input type="text" name="" id="component-code-input"> <select name="component-selector" id="component-selector"></select></td> <td
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="Add New" id="add-new-sales-kit-button"><br>
+        <a href="items-and-inventory.html">Back</a>
+    </div>
+</body>
+<script src="scripts/items and inventory/sales-kits.js"></script>
+</html>

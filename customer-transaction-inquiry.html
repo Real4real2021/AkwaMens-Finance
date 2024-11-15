@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Customer Transaction</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Customer Transactions</h1>
+        <div>
+            <label for="reference">Reference:
+                <input type="text">
+            </label>
+            <label for="select-a-customer">Select a Customer:
+                <select name="customer-selector" id="customer-selector">
+                    <option value="all-customer">All Customer</option>
+                    <option value="kk">KK</option>
+                </select>
+            </label>
+            <select name="transaction-type" id="transaction-type">
+                <option value="all-types">All Types</option>
+                <option value="sales-invoices">Sales Invoices</option>
+                <option value="unsettled-transaction">Unsettled Transaction</option>
+                <option value="payments">Payments</option>
+                <option value="credit-notes">Credit Notes</option>
+                <option value="delivery-notes">Delivery Notes</option>
+                <option value="journal-entries">Journal Entries</option>
+            </select>
+        </div>
+        <div>
+            <table>
+                <th>Type</th>
+                <th>#</th>
+                <th>Order</th>
+                <th>Reference</th>
+                <th>Date</th>
+                <th>Due Date</th>
+                <th>Customer</th>
+                <th>Branch</th>
+                <th>Currency</th>
+                <th>Amount</th>
+                <tbody>
+                    <tr>
+                        <td colspan="10">No Records</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+<script src="scripts/customer-transaction-inquiry.js"></script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Description</th>
+        <th>Template No</th>
+        <th>Customer</th>
+        <th>Branch/Group</th>
+        <th>Days</th>
+        <th>End</th>
+        <th>Last Created</th>
+        <tbody>
+            <tr>
+                <td>Weekly Maintenance</td>
+                <td>6</td>
+                <td>AkwaMens SA</td>
+                <td>7</td>
+                <td>0</td>
+                <td>04/01/2023</td>
+                <td>04/01/2024</td>
+                <td>04/08/2023</td>
+                <td><input type="button" value="Edit"></td>
+                <td><input type="button" value="Delete"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <td>Description:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Template</td>
+                <td><select name="template-selector" id="template-selector">
+                    <option value="6-amount-450">6 Amount 450</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Customer:</td>
+                <td><select name="customer-selector" id="customer-selector"></select></td>
+            </tr>
+            <tr>
+                <td>Sales Group:</td>
+                <td><select name="sales-group-selector" id="sales-group-selector">
+                    <option value="large">Large</option>
+                    <option value="medium">Medium</option>
+                    <option value="small">Small</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Days:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Monthly:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Begin:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>End:</td>
+                <td><input type="date"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <input type="button" value="Add New"><br>
+        <a href="index.html">Back</a>
+    </div>
+</body>
+</html>

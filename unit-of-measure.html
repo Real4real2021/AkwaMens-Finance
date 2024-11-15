@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Units of Measure</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html" class="active">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Units of Measure</h1>
+        <div id="first-table">
+            <table>
+                <th>Unit</th>
+                <th>Description</th>
+                <th>Decimals</th>
+                <tbody>
+                    <tr>
+                        <td>each</td>
+                        <td>Each</td>
+                        <td>0</td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                    <tr>
+                        <td>hr</td>
+                        <td>Hours</td>
+                        <td>0</td>
+                        <td><input type="button" value="Edit" id="edit-button"></td>
+                        <td><input type="button" value="Delete" id="delete-button"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="" id="radio-show-also-inactive">Show also inactive</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <div id="seconda-table">
+            <table>
+                <tr>
+                    <td>Unit Abbreviation:</td>
+                    <td>Unit Abbreviation:</td>
+                </tr>
+                <tr>
+                    <td>Descriptive Name:</td>
+                    <td><input type="text" name="" id="descriptive-name-input"></td>
+                </tr>
+                <tr>
+                    <td>Decimal Places:</td>
+                    <td><input type="text" name="" id="decimal-places-input"></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="Add New" id="add-new-button"><br>
+        <a href="items-and-inventory.html">Back</a>
+    </div>
+</body>
+<script src="scripts/items and inventory/unit-of-measure.js"></script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Balance Sheet Drilldown</title>
+</head>
+<body>
+    <div class="sidebar">
+
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html" class="active">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Balance Sheet Drilldown</h1>
+        <div id="input-div">
+            <label for="as-at">As At:
+                <input type="date" name="" id="as-at-date-input">
+            </label>
+            <label for="dimension">Dimension:
+                <select name="" id="dimension-selector"></select>
+            </label>
+            <input type="button" value="Show" id="show-button">
+        </div>
+        <div id="table-div">
+            <table>
+                <tr>
+                    <td colspan="2">Assets</td>
+                </tr>
+                <tr>
+                    <td>1 - Current Assets</td>
+                    <td>5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td> 2 - Inventory Assets</td>
+                    <td>5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td>Total Assets</td>
+                    <td>5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Liabilites</td>
+                </tr>
+                <tr>
+                    <td>4 - Current Liabilities</td>
+                    <td>5 000 000.00<td>
+                </tr>
+                <tr>
+                    <td>6 Share Capital</td>
+                    <td>5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td> 7 - Retained Earnings</td>
+                    <td>5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td>Total Liablies</td>
+                    <td>5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td>Calulated return</td>
+                    <td>-5 000 000.00</td>
+                </tr>
+                <tr>
+                    <td>Total Liabilites and Equities</td>
+                    <td>5 000 000.00</td>
+                </tr>
+            </table>
+        </div>
+        <a href="banking-and-general-ledger.html">Back</a>
+    </div>
+</body>
+<script src="scripts/banking and general ledger/balance-sheet-drilldown.js"></script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>GL Accounts</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html" class="active">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>GL Accounts</h1>
+        <select name="" id="gl-account-selector"></select>
+        <table>
+            <tr>
+                <td>Account Code:</td>
+                <td><input type="text" name="" id="account-code-input"></td>
+            </tr>
+            <tr>
+                <td>Account Code 2:</td>
+                <td><input type="text" name="" id="account-code-2-input"></td>
+            </tr>
+            <tr>
+                <td>Account Name:</td>
+                <td><input type="text" name="" id="account-name-input"></td>
+            </tr>
+            <tr>
+                <td>Account Group:</td>
+                <td><select name="" id="account-group-selector"></select></td>
+            </tr>
+            <tr>
+                <td>Account Tags:</td>
+                <td><input type="text" name="" id="account-tags-input"></td>
+            </tr>
+            <tr>
+                <td>Account Status:</td>
+                <td><select name="" id="account-status-selector"></select></td>
+            </tr>
+        </table>
+        <input type="button" value="Add Account" id="add-account-button">
+        <a href="banking-and-general-ledger.html">Banking & General Ledger</a>
+    </div>
+</body>
+<script src="scripts/banking and general ledger/gl-accounts.js"></script>
+</html>

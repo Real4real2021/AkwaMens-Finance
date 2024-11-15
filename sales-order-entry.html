@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sales Order Entry</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <h1>AkwaMens</h1>
+            <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+            
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Purchases</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Manufacturing</a></li>
+                <li><a href="#">Fixed Assets</a></li>
+                <li><a href="#">Banking</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            <div class="user-info">
+                <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+                <span class="user-name">John Doe</span>
+            </div>
+        </div>
+        <div class="main-content">
+
+            <div class="customer-info-inputs">
+                
+            </div>
+            <div class="sales-order-table">
+                
+            </div>
+            <div class="third-quarter">
+                <h2>Cash Payment</h2>
+                <label for="delivery-from-location">Delivery From Location:
+                    <select name="Location" id="Location">
+                        <option value="Default">Default</option>
+                    </select>
+                </label><br>
+                <label for="cash-account">Cash Account:
+                    Petty Cash account
+                </label><br>
+                <label for="comments">Comments:
+                    <input type="text" name="comments" id="comments">
+                </label>
+            </div>
+            <div class="last-quater">
+                <a href="successful-sales-order-entry.html">Place Order</a>
+                <input type="button" value="Cancel Order" id="cancel-order-button"><br>
+                <a href="index.html">Back</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="scripts/sales-order-entry.js"></script>
+</html>

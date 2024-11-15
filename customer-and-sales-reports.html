@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Reports and Analysis</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="#">Purchases</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Fixed Assets</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div class="report-classes customer-info">
+            Repot Classes: <br>
+            <input type="button" class="customer-button" value="Customer"><br>
+            <input type="button" class="supplier-button" value="Supplier"><br>
+            <input type="button" class="inventory-button" value="Inventory"><br>
+            <input type="button" class="manufacturing-button" value="Manufacturing"><br>
+            <input type="button" class="fixed-assets-button" value="Fixed Assets"><br>
+            <input type="button" class="dimensions-button" value="Dimensions"><br>
+            <input type="button" class="banking-button" value="Banking"><br>
+            <input type="button" class="general-ledger-button" value="General Ledger"><br>
+        </div>
+        <div class="reports-for-class customer-info">
+           
+        </div>
+        <div class="display customer-info">
+            
+        </div>
+        <div>
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+<script src="scripts/customer-and-sales-reports.js"></script>
+</html>

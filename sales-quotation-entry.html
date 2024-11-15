@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkwaMens - Sales Quotation Entry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <h1>AkwaMens</h1>
+            <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+            
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Purchases</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Manufacturing</a></li>
+                <li><a href="#">Fixed Assets</a></li>
+                <li><a href="#">Banking</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            <div class="user-info">
+                <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+                <span class="user-name">John Doe</span>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>New Sales Quotation Entry</h1>
+            <div class="content-container">
+                <div class="first-quarter"></div>
+                <div class="second-quarter"></div>
+                <div class="third-quarter">
+                    <h2>Cash Payment</h2>
+                    <label for="location">Delivery From Location:
+                        <select name="Location" id="location">
+                            <option value="Default">Default</option>
+                        </select>
+                    </label>
+                    <label for="cash-account-selector">Cash Account:
+                        <span id="cash-account-selector">Petty Cash account</span>
+                    </label>
+                    <label for="comments">Comments:
+                        <input type="text" name="comments" id="comments">
+                    </label>
+                </div>
+                <div class="last-quarter">
+                    <button id="place-quotation-button" class="primary-button"><a href="successful-sales-quotation-entry.html">Place Quotation</a></button>
+                    <button id="cancel-quotation-button" class="secondary-button">Cancel Quotation</button>
+                    <a href="index.html" class="back-link">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/sales-quotation-entry.js"></script>
+</body>
+</html>

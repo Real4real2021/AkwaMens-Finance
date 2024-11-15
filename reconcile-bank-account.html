@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Reconcile Bank Accounts</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html" class="active">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Reconcile Bank Accounts</h1>
+        <div id="input-div">
+            <label for="account">Account:
+                <select name="" id="account-selector"></select>
+            </label>
+            <label for="bank-statement">Bank Statement:
+    
+            </label>
+        </div>
+        <div id="first-table">
+            <table>
+                <th>Reconcile Date</th>
+                <th>Beginning Balance</th>
+                <th>Ending Balance</th>
+                <th>Account Total</th>
+                <th>Reconcile Amount</th>
+                <th>Difference</th>
+                <tbody>
+                    <tr>
+                        <td><input type="date" name="" id="reconcile-date-input"></td>
+                        <td><input type="text" name="" id="beginning-balance-input"></td>
+                        <td><input type="text" name="" id="ending-balance-input"></td>
+                        <td><input type="text" name="" id="account-total-input"></td>
+                        <td><input type="text" name="" id="reconcile-amount-input"></td>
+                        <td><input type="text" name="" id="difference-input"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="second-table">
+            <h2>Current Account - Rand</h2>
+            <table>
+                <th>Type</th>
+                <th>#</th>
+                <th>Reference</th>
+                <th>Date</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Person/Item</th>
+                <th>Memo</th>
+                <tbody>
+                    <tr>
+                        <td>Bank Payment</td>
+                        <td>1</td>
+                        <td>001/2024</td>
+                        <td>19/09/2024</td>
+                        <td></td>
+                        <td>500.00</td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="button" value="GL" id="gl"></td>
+                        <td><input type="checkbox" name="" id="reconcile-this-transaction"></td>
+                    </tr>
+                    <tr>
+                        <td>Supplier Payment</td>
+                        <td>1</td>
+                        <td>002/2024</td>
+                        <td>19/09/2024</td>
+                        <td></td>
+                        <td>60 000 000.00</td>
+                        <td>AkwaMens SA</td>
+                        <td></td>
+                        <td><input type="button" value="GL" id="gl"></td>
+                        <td><input type="checkbox" name="" id="reconcile-this-transaction"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="button" value="Reconcile All" id="reconcile-all"><br>
+        <a href="banking-and-general-ledger.html">Back</a>
+    </div>
+</body>
+<script src="scripts/banking and general ledger/reconcile-bank-account.js"></script>
+</html>

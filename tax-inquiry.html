@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Tax Inquiry</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AkwaMens</h1>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Sales</a></li>
+            <li><a href="purchases.html">Purchases</a></li>
+            <li><a href="items-and-inventory.html">Items and Inventory</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="fixed-assets.html">Fixed Assets</a></li>
+            <li><a href="banking-and-general-ledger.html" class="active">Banking and General Ledger</a></li>
+            <li><a href="#">Payroll</a></li>
+            <li><a href="setup.html">Setup</a></li>
+        </ul>
+        <div class="user-info">
+            <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Doe</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Tax Inquiry</h1>
+        <div id="input-div">
+            <label for="from">From:
+                <input type="date" name="" id="from-date-input">
+            </label>
+            <label for="to">To:
+                <input type="date" name="" id="to-date-input">
+            </label>
+            <input type="button" value="Show" id="show-button">
+        </div>
+        <div id="table-div">
+            <table>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Outputs/Inputs</th>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Total payable or refund</td>
+                        <td>0.00</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <a href="banking-and-general-ledger.html">Back</a>
+    </div>
+</body>
+<script src="scripts/banking and general ledger/tax-inquiry.js"></script>
+</html>

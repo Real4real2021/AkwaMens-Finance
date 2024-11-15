@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sales Types</title>
+</head>
+<body>
+    <h1>Sales Types</h1>
+    <div>
+        <table>
+            <th>Type Name</th>
+            <th>Factor</th>
+            <th>Tax Incl</th>
+            <tbody>
+                <tr>
+                    <td>Retail</td>
+                    <td>Base</td>
+                    <td>Yes</td>
+                    <td><input type="button" value="Edit"></td>
+                    <td><input type="button" value="Delete"></td>
+                </tr>
+                <tr>
+                    <td>Wholesale</td>
+                    <td>0.7000</td>
+                    <td>No</td>
+                    <td><input type="button" value="Edit"></td>
+                    <td><input type="button" value="Delete"></td>
+                </tr>
+                <tr>
+                    <td colspan="5"> <input type="radio"> Show also Inactive</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <label for="sales">Sales:
+            <input type="text">
+        </label><br>
+        <label for="calculation-factor">Calculation Factor:
+            <input type="text" placeholder="1.000">
+        </label><br>
+        <label for="tax-included">Tax included:
+            <input type="radio">
+        </label>
+    </div>
+    <div>
+        <input type="button" value="Add New">
+    </div>
+    <div>
+        <a href="index.html">Back</a>
+    </div>
+</body>
+</html>
